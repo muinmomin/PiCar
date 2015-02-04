@@ -1,0 +1,23 @@
+body {
+    background-color: black;
+}
+
+#block_portrait {
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.placeholder {
+    font-family: sans-serif;
+    color: white;
+    text-align:center;
+    position: fixed;
+    top: 45%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+}

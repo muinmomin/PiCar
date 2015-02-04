@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Car: Control Room</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="static/stylesheet.css">
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="static/mainscript.js"></script>
+        <script src="static/camscript.js"></script>
+    </head>
+
+    <body id="mainbody" onload="setTimeout('init();', 100);">
+        <h1 id="camtitle">Live Camera Feed</h1>
+        <div id="livefeed">
+            <img id="mjpeg_dest" />
+            <p id="distance"><!--json data here--></p>
+        </div>
+        
+        <div id="controls">
+            <div id="motorcontrol">
+                <p class="controltitle">Motor Control</p>
+                <img class="controlimg" src="static/wasdkeys1.png" alt="wasd">
+            </div>
+
+            <div id="cameracontrol">
+                <p class="controltitle">Camera Control</p>
+                <img class="controlimg" src="static/arrowkeys.png" alt="arrowkeys">
+            </div>
+        </div>
+    </body>
+
+</html>
+
+
+{#TODO: shutdown and reboot buttons; turn camera on and off buttons#}

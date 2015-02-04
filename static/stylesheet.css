@@ -1,0 +1,74 @@
+#logincontainer {
+    width: 500px;
+    height: 220px;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+    border-radius: 13px;
+}
+#loginbody {
+    background-color: #c3cedb;
+}
+form {
+    width: 350px;
+    margin: auto;
+}
+#submitstuff {
+    margin-left: -60px;
+}
+#errormsg {
+    margin-left: -60px;
+}
+
+#mainbody {
+    background-color: #c3cedb
+}
+#camtitle {
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 35px;
+}
+#livefeed {
+    width: 600px;
+    height: 400px;
+    line-height: 400px;
+    text-align: center;
+    background-color: #c3cedb;
+    margin: -11px auto auto;
+}
+#controls {
+    width: 600px;
+    height: 180px;
+    margin: auto;
+}
+#motorcontrol {
+    float:left;
+    height: 180px;
+    width: 250px;
+}
+#cameracontrol {
+    float: right;
+    height: 180px;
+    width: 250px;
+}
+.controltitle {
+    text-align: center;
+    font-family: sans-serif;
+}
+.controlimg {
+    margin-top: -25px;
+}
+
+#livefeed > img {
+    vertical-align: middle;
+}
+
+#distance {
+    position: relative;
+    color: white;
+    font-size: 20px;
+}
