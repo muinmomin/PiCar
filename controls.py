@@ -6,32 +6,53 @@ import time
 #SETUP PINS
 def initpins():
     GPIO.setmode(GPIO.BOARD)
-    GPIO.setup(led1, GPIO.OUT)
-    GPIO.setup(led2, GPIO.OUT)
-    GPIO.output(led1, False)
-    GPIO.output(led2, False)
+    GPIO.setup(7, GPIO.OUT)
+    GPIO.setup(11, GPIO.OUT)
+    GPIO.setup(13, GPIO.OUT)
+    GPIO.setup(15, GPIO.OUT)
 
 
 #MOTOR CONTROL FUNCTIONS
 def forward():
-    GPIO.output(led1, True)
+    initpins()
+    GPIO.output(7, False)
+    GPIO.output(11, True)
+    GPIO.output(13, True)
+    GPIO.output(15, False)
 
 def reverse():
-    GPIO.output(led2, True)
+    initpins()
+    GPIO.output(7, True)
+    GPIO.output(11, False)
+    GPIO.output(13, False)
+    GPIO.output(15, True)
 
-def sudoleft():
-    GPIO.output(led1, True)
-    GPIO.output(led2, True)
+def left():
+    initpins()
+    GPIO.output(7, True)
+    GPIO.output(11, True)
+    GPIO.output(13, True)
+    GPIO.output(15, False)
 
-def stop_sudoleft():
-    GPIO.output(led1, False)
-    GPIO.output(led2, False)
+def right():
+    initpins()
+    GPIO.output(7, False)
+    GPIO.output(11, False)
+    GPIO.output(13, False)
+    GPIO.output(15, True)
+
+def stop_left():
+    GPIO.cleanup()
+
+def stop_right():
+    GPIO.cleanup()
 
 def stop_forward():
-    GPIO.output(led1, False)
+    GPIO.cleanup()
 
 def stop_reverse():
-    GPIO.output(led2, False)
+    GPIO.cleanup()
+
 
 
 

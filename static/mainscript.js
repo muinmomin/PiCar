@@ -35,12 +35,22 @@ $(document).ready(function(){
                 allowed = false;
             }
         }
-        else if(event.keyCode == 65 || event.keyCode == 68) {
+        else if(event.keyCode == 65) {
             if (allowed) {
                 $.ajax({
                    type: "POST",
                     url: "/turnleft"
                 });
+                allowed = false;
+            }
+        }
+        else if(event.keyCode == 68) {
+            if (allowed) {
+                $.ajax({
+                    type: "POST",
+                    url: "/turnright"
+                });
+                allowed = false;
             }
         }
     });
@@ -64,10 +74,16 @@ $(document).ready(function(){
                 url: "/motorreversestop"
             });
         }
-        else if(event.keyCode == 65 || event.keyCode == 68) {
+        else if(event.keyCode == 65) {
             $.ajax({
                 type: "POST",
                 url: "/stopleft"
+            });
+        }
+        else if(event.keyCode == 68) {
+            $.ajax({
+                type: "POST",
+                url: "/stopright"
             });
         }
         allowed = true;

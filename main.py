@@ -91,10 +91,34 @@ def motor_reverse_stop():
         return "FAILED"
 
 
-@app.route("/distance", methods=["GET"])
-def calculate_distance():
-    d = "%.2f" % distance()
-    return jsonify(dist=d)
+@app.route("/turnleft", methods=["POST"])
+def motorleft():
+    if request.method == "POST":
+        left()
+    else:
+        return "FAILED"
+
+@app.route("/turnright", methods=["POST"])
+def motorright():
+    if request.method == "POST":
+        right()
+    else:
+        return "FAILED"
+
+@app.route("/stopleft", methods=["POST"])
+def stopmotorleft():
+    if request.method == "POST":
+        stop_left()
+    else:
+        return "FAILED"
+
+@app.route("/stopright", methods=["POST"])
+def stopmotorright():
+    if request.method == "POST":
+        stop_right()
+    else:
+        return "FAILED"
+
 
 
 
@@ -108,21 +132,12 @@ def power_led():
     else:
         return "FAILED"
 
-
-
-@app.route("/turnleft", methods=["POST"])
-def motorleft():
-    if request.method == "POST":
-        sudoleft()
-    else:
-        return "FAILED"
-@app.route("/stopleft", methods=["POST"])
-def stopmotorleft():
-    if request.method == "POST":
-        stop_sudoleft()
-    else:
-        return "FAILED"
+@app.route("/distance", methods=["GET"])
+def calculate_distance():
+    d = "%.2f" % distance()
+    return jsonify(dist=d)
 
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0")
+    initpins()
