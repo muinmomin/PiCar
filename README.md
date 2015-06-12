@@ -3,7 +3,7 @@
 
 ---
 
-Live camera feed from PiCar to website on laptop  
+Live camera feed from PiCar to a website on the laptop  
 ![livecamera](readmestuff/LiveCameraFeed.gif)
 
 Live camera feed from PiCar to phone  
@@ -16,4 +16,5 @@ Moving motors in reverse using `S` key on keyboard
 
 ##### Future improvements:
 - Allow controlling of PiCar through the accelerometer of touchscreen devices (currently working on this)
+- Make PiCar accessible from any network rather than local server (currently working on this)
 - Make PiCar look better
