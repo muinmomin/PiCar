@@ -9,7 +9,7 @@ Live camera feed from PiCar to website on laptop
 Live camera feed from PiCar to phone  
 ![livecamera-phone](readmestuff/LiveCameraFeed-Phone.gif)
 
-Moving forward using `W` key on keyboard  
+Moving motors in reverse using `S` key on keyboard  
 ![motormovement](readmestuff/MotorMovement.gif)
 
 ---
