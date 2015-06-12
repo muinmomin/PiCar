@@ -1,6 +1,7 @@
 
 $(document).ready(function() {
 
+    // makes sure the device is in landscape orientation to ensure best live video feed quality
     function doOnOrientationChange() {
         switch(window.orientation)
         {

@@ -1,9 +1,8 @@
 __author__ = 'Muin'
 import RPi.GPIO as GPIO
-from pins import *
 import time
 
-#SETUP PINS
+#SETUP GPIO PINS
 def initpins():
     GPIO.setmode(GPIO.BOARD)
     GPIO.setup(7, GPIO.OUT)
@@ -41,22 +40,13 @@ def right():
     GPIO.output(13, False)
     GPIO.output(15, True)
 
-def stop_left():
-    GPIO.cleanup()
-
-def stop_right():
-    GPIO.cleanup()
-
-def stop_forward():
-    GPIO.cleanup()
-
-def stop_reverse():
+# cleanup functions stops all motors (by cleaning up GPIO pins)
+def stop_m():
     GPIO.cleanup()
 
 
 
-
-#measuring distance
+#measuring distance through sensor
 def distance():
     GPIO.setmode(GPIO.BOARD)
     GPIO.setup(8, GPIO.OUT)
@@ -81,12 +71,3 @@ def distance():
     distance = (total_time * 170.145) * 100
 
     return distance
-
-
-
-
-#button mobile edition
-def powerled():
-    forward()
-    time.sleep(0.08)
-    stop_forward()

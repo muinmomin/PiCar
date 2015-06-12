@@ -75,22 +75,6 @@ def motor_reverse():
         return "FAILED"
 
 
-@app.route("/motorforwardstop", methods=["POST"])
-def motor_forward_stop():
-    if request.method == "POST":
-        stop_forward()
-    else:
-        return "FAILED"
-
-
-@app.route("/motorreversestop", methods=["POST"])
-def motor_reverse_stop():
-    if request.method == "POST":
-        stop_reverse()
-    else:
-        return "FAILED"
-
-
 @app.route("/turnleft", methods=["POST"])
 def motorleft():
     if request.method == "POST":
@@ -105,32 +89,14 @@ def motorright():
     else:
         return "FAILED"
 
-@app.route("/stopleft", methods=["POST"])
-def stopmotorleft():
+
+@app.route("/motorstop", methods=["POST"])
+def motor_reverse_stop():
     if request.method == "POST":
-        stop_left()
+        stop_m()
     else:
         return "FAILED"
 
-@app.route("/stopright", methods=["POST"])
-def stopmotorright():
-    if request.method == "POST":
-        stop_right()
-    else:
-        return "FAILED"
-
-
-
-
-
-
-
-@app.route("/flashled", methods=["POST"])
-def power_led():
-    if request.method == "POST":
-        powerled()
-    else:
-        return "FAILED"
 
 @app.route("/distance", methods=["GET"])
 def calculate_distance():

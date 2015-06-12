@@ -26,15 +26,7 @@ $(document).ready(function(){
                 allowed = false;
             }
         }
-        //showing distance
-        else if(event.keyCode == 32) {
-            if (allowed) {
-                $.getJSON("/distance", function(jd) {
-                    $("#distance").text(jd.dist);
-                });
-                allowed = false;
-            }
-        }
+        //turning left
         else if(event.keyCode == 65) {
             if (allowed) {
                 $.ajax({
@@ -44,11 +36,21 @@ $(document).ready(function(){
                 allowed = false;
             }
         }
+        //turning right
         else if(event.keyCode == 68) {
             if (allowed) {
                 $.ajax({
                     type: "POST",
                     url: "/turnright"
+                });
+                allowed = false;
+            }
+        }
+        //showing distance
+        else if(event.keyCode == 32) {
+            if (allowed) {
+                $.getJSON("/distance", function(jd) {
+                    $("#distance").text(jd.dist);
                 });
                 allowed = false;
             }
@@ -60,30 +62,11 @@ $(document).ready(function(){
         if(event.charCode == 0 && event.keyCode==0) {
             return false;
         }
-        if(event.keyCode == 87)
+        if(event.keyCode == 87 || event.keyCode == 83 || event.keyCode == 65 || event.keyCode == 68)
         {
             $.ajax({
                 type: "POST",
-                url: "/motorforwardstop"
-            });
-        }
-        else if(event.keyCode == 83)
-        {
-            $.ajax({
-                type: "POST",
-                url: "/motorreversestop"
-            });
-        }
-        else if(event.keyCode == 65) {
-            $.ajax({
-                type: "POST",
-                url: "/stopleft"
-            });
-        }
-        else if(event.keyCode == 68) {
-            $.ajax({
-                type: "POST",
-                url: "/stopright"
+                url: "/motorstop"
             });
         }
         allowed = true;
