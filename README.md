@@ -11,3 +11,9 @@ Live camera feed from PiCar to phone
 
 Moving forward using `W` key on keyboard  
 ![motormovement](readmestuff/MotorMovement.gif)
+
+---
+
+##### Future improvements:
+- Add accelerometer control to touchscreen devices to control PiCar (currently working on this)
+- Make PiCar look better
