@@ -18,3 +18,4 @@ Moving motors in reverse using `S` key on keyboard
 - Allow controlling of PiCar through the accelerometer of touchscreen devices (currently working on this)
 - Make PiCar accessible from any network rather than local server (currently working on this)
 - Make PiCar look better
+- More code cleaning
