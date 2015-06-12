@@ -15,5 +15,5 @@ Moving motors in reverse using `S` key on keyboard
 ---
 
 ##### Future improvements:
-- Add accelerometer control to touchscreen devices to control PiCar (currently working on this)
+- Allow controlling of PiCar through the accelerometer of touchscreen devices (currently working on this)
 - Make PiCar look better
